@@ -79,7 +79,7 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ onClose }) => {
                 height={80}
               />
               <div className="w-full">
-                <h2 className="mb-2 text-lg font-bold">Bist du gestresst?</h2>
+                <h2 className="mb-2 text-lg font-bold">Are you stressed?</h2>
                 <p className="text-gray-700">
                   Sign up now and we&apos;ll send you supportive information on
                   stress management.
@@ -106,7 +106,7 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ onClose }) => {
                 type="submit"
                 className="w-full rounded-lg bg-moss-green px-4 py-2 font-medium text-white hover:bg-green-600"
               >
-                Senden
+                Subscribe
               </button>
             </form>
           </>
@@ -115,7 +115,7 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ onClose }) => {
           onClick={onClose}
           className="flex w-full justify-center px-4 py-2 font-medium sm:hidden"
         >
-          Schließen
+          Close
         </button>
         <button
           onClick={onClose}
