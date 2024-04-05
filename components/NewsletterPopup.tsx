@@ -5,10 +5,24 @@ import Image from "next/image";
 import CloseIcon from "../public/close.svg";
 
 interface NewsletterPopupProps {
-  onClose?: () => void;
+  onClose: () => void;
+  title: string;
+  description: string;
+  thankyouTitle: string;
+  thankyouDescription: string;
+  submitButtonText: string;
+  closeButtonText: string;
 }
 
-const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ onClose }) => {
+const NewsletterPopup: React.FC<NewsletterPopupProps> = ({
+  onClose,
+  title,
+  description,
+  thankyouTitle,
+  thankyouDescription,
+  submitButtonText,
+  closeButtonText,
+}) => {
   const [email, setEmail] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -53,12 +67,8 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ onClose }) => {
               height={137}
             />
             <div className="w-full">
-              <h2 className="mb-2 text-lg font-bold">Perfect, it worked!</h2>
-              <p className="text-gray-700">
-                Thank you for signing up for our newsletter. Be excited, many
-                exciting strategies and tips await you soon from the world of
-                psychology and psychotherapy!
-              </p>
+              <h2 className="mb-2 text-lg font-bold">{thankyouTitle}</h2>
+              <p className="text-gray-700">{thankyouDescription}</p>
             </div>
           </div>
         ) : (
@@ -79,11 +89,8 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ onClose }) => {
                 height={80}
               />
               <div className="w-full">
-                <h2 className="mb-2 text-lg font-bold">Are you stressed?</h2>
-                <p className="text-gray-700">
-                  Sign up now and we&apos;ll send you supportive information on
-                  stress management.
-                </p>
+                <h2 className="mb-2 text-lg font-bold">{title}</h2>
+                <p className="text-gray-700">{description}</p>
               </div>
             </div>
             <form onSubmit={handleSubmit} className="mt-4">
@@ -106,7 +113,7 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ onClose }) => {
                 type="submit"
                 className="w-full rounded-lg bg-moss-green px-4 py-2 font-medium text-white hover:bg-green-600"
               >
-                Subscribe
+                {submitButtonText}
               </button>
             </form>
           </>
@@ -115,7 +122,7 @@ const NewsletterPopup: React.FC<NewsletterPopupProps> = ({ onClose }) => {
           onClick={onClose}
           className="flex w-full justify-center px-4 py-2 font-medium sm:hidden"
         >
-          Close
+          {closeButtonText}
         </button>
         <button
           onClick={onClose}

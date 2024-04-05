@@ -135,7 +135,17 @@ const BlogPost: React.FC = () => {
           </p>
         </main>
       </div>
-      {showPopup && <NewsletterPopup onClose={handlePopupClose} />}
+      {showPopup && (
+        <NewsletterPopup
+          onClose={handlePopupClose}
+          title="Are you stressed?"
+          description="Sign up now and we'll send you supportive information onstress management."
+          thankyouTitle="Perfect, it worked!"
+          thankyouDescription="Thank you for signing up for our newsletter. Be excited, many exciting strategies and tips await you soon from the world of psychology and psychotherapy!"
+          submitButtonText="Subscribe"
+          closeButtonText="Close"
+        />
+      )}
     </>
   );
 };
