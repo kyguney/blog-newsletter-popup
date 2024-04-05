@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Newsletter Signup Pop-up
 
-## Getting Started
+## Live Demo
 
-First, run the development server:
+The project is deployed and can be accessed [here](https://blog-newsletter-popup.vercel.app/).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project demonstrates a Next.js implementation of a scroll-triggered newsletter signup pop-up, perfect for increasing email subscriptions on your blog or website. Built with TypeScript and Tailwind CSS, it offers a responsive design, local storage persistence, and easy integration.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Requirements
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Node.js](https://nodejs.org/en) (Version 20.9.0)
+- [Node Version Manager](https://github.com/nvm-sh/nvm) (optional)
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- **Scroll-Triggered:** The pop-up appears when the user scrolls down 50% of the blog post, capturing their attention at the right moment.
+- **Responsive Design:** The pop-up adapts seamlessly to different screen sizes, ensuring a user-friendly experience on all devices.
+- **Local Storage Persistence:** User data and popup visibility are managed using local storage, preventing the popup from reappearing after submission or manual closure until the page is refreshed.
+- **Email Validation:** Basic email validation is in place to ensure users enter a valid email address.
+- **Success Message:** Upon successful form submission, a success message is displayed to provide feedback to the user.
+- **Easy Integration:** The pop-up component is designed for reusability, allowing you to easily integrate it into other pages or posts as needed.
+- **Clean Code and Documentation:** The code follows JavaScript coding standards and is well-documented for clarity and maintainability.
+- **Tailwind CSS Styling:** The pop-up is styled using Tailwind CSS for a modern and responsive appearance.
+- **Close Button:** A close button allows users to manually dismiss the pop-up.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To run this project locally, follow these steps:
 
-## Deploy on Vercel
+1. Clone the repository:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/kyguney/blog-newsletter-popup.git
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. Navigate to the project directory:
+
+    ```bash
+    cd blog-newsletter-popup
+    ```
+
+3. If using NVM, switch to the Node version specified in the project (.nvmrc file include the version):
+
+    ```bash
+    nvm use
+    ```
+
+4. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+### Usage
+
+To start the development server, run:
+
+  ```bash
+  npm run dev
+  ```
+
+This will start the application on http://localhost:3000.
+
+### Contributing
+
+Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests.
+
+### License
+
+This project is licensed under the MIT License.
