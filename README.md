@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-The project is deployed and can be accessed [here](https://blog-newsletter-popup.vercel.app/).
+The project is deployed and can be accessed [here](https://blog-newsletter-popup.kyguney.com/).
 
 ## Description
 
